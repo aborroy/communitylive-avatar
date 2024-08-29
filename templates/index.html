@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Capture & File Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header-container">
+        <img class="hyland-logo" src="static/Hyland_logo.png" alt="Hyland Logo"/>
+        <h1>Get your Avatar for Hyland Connect</h1>
+    </div>
+    <div class="main-container">
+        <!-- Upload or Capture Section -->
+        <div class="upload-section">
+            <h2>Capture or Upload Image</h2>
+
+            <!-- Slider for Reality to Fantasy -->
+            <div class="slider-container">
+                <span>Avatar Style&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <label for="realityFantasySlider">Reality</label>
+                <input type="range" id="realityFantasySlider" name="realityFantasy" min="1" max="5" value="3" />
+                <label for="realityFantasySlider">Fantasy</label>
+            </div>
+
+            <!-- Radio buttons for Gender selection -->
+            <div class="gender-container">
+                <span>Avatar Gender</span>
+                <label class="gender-option">
+                    <input type="radio" name="gender" value="auto" checked>
+                    <span class="icon">A</span> Auto
+                </label>
+                <label class="gender-option">
+                    <input type="radio" name="gender" value="male">
+                    <span class="icon">♂️</span> Male
+                </label>
+                <label class="gender-option">
+                    <input type="radio" name="gender" value="female">
+                    <span class="icon">♀️</span> Female
+                </label>
+            </div>
+
+            <h3>Capture Image</h3>
+            <video id="webcam" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="640" height="480" style="display:none;"></canvas><br/>
+            <button id="captureButton">Capture from Webcam</button><br/><br/>
+                        
+            <h3>Upload Picture</h3>
+            <input type="file" id="fileInput" accept="image/*"><br/>
+            <button id="uploadButton">Get Avatar</button>
+        </div>
+
+        <!-- Your Avatar Section -->
+        <div class="avatar-section">
+
+            <h2>Your Avatar</h2>
+            <div id="loadingMessage">Processing your image, please wait...</div>    
+            <img id="resultImage" src="" alt="Result Image" style="display:none; max-width: 100%; height: auto;"/>
+            <a id="downloadButton" class="button" style="display:none;">Download Avatar</a>
+
+            <h2>Your Capture</h2>
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="display:none; max-width: 100%; height: auto;"/>
+            <a id="downloadCapture" class="button" style="display:none;">Download Capture</a>
+
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const captureButton = document.getElementById('captureButton');
+        const webcam = document.getElementById('webcam');
+        const canvas = document.getElementById('canvas');
+        const uploadButton = document.getElementById('uploadButton');
+        const uploadedImage = document.getElementById('uploadedImage');
+        const resultImage = document.getElementById('resultImage');
+        const loadingMessage = document.getElementById('loadingMessage');
+        const downloadButton = document.getElementById('downloadButton');
+        const downloadCapture = document.getElementById('downloadCapture');
+        const realityFantasySlider = document.getElementById('realityFantasySlider');
+        const genderOptions = document.querySelectorAll('input[name="gender"]');
+
+        const quotes = [
+            "AI is like a toddler with superpowers—unpredictable and learning.",
+            "An avatar is just your digital stunt double, minus the hazard pay.",
+            "AI: Because sometimes you need a smarter friend to blame things on.",
+            "Creating avatars is like online shopping for your personality.",
+            "AI can predict everything... except my Wi-Fi password.",
+            "Avatars: The ultimate way to be yourself, but cooler.",
+            "If AI starts dreaming, I hope it's about taking over my chores.",
+            "My avatar has better fashion sense, but I have better snack choices.",
+            "AI doesn’t sleep, but it still can’t figure out my coffee order.",
+            "An avatar is proof that I can be in two places at once—virtually."
+        ];
+
+
+        function changeLoadingMessage() {
+            const loadingMessageElement = document.getElementById('loadingMessage');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            loadingMessageElement.textContent = quotes[randomIndex];
+        }
+
+        // Change the loading message every time the blink animation finishes
+        setInterval(changeLoadingMessage, 4200);
+
+        // Set up webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                webcam.srcObject = stream;
+            })
+            .catch(err => {
+                console.error('Error accessing webcam: ', err);
+            });
+
+        function disableButtons() {
+            captureButton.disabled = true;
+            uploadButton.disabled = true;
+            captureButton.classList.add('disabled');
+            uploadButton.classList.add('disabled');
+        }
+
+        function enableButtons() {
+            captureButton.disabled = false;
+            uploadButton.disabled = false;
+            captureButton.classList.remove('disabled');
+            uploadButton.classList.remove('disabled');
+        }
+
+        captureButton.addEventListener('click', () => {
+            const context = canvas.getContext('2d');
+            context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob(blob => {
+                // Display the captured image
+                const url = URL.createObjectURL(blob);
+                uploadedImage.src = url;
+                uploadedImage.style.display = 'block';
+                webcam.style.display = 'none';
+
+                // Set up download button
+                downloadCapture.style.display = 'block';
+                downloadCapture.href = url;
+                downloadCapture.download = 'capture.jpg'; // Default filename
+
+                // Upload the captured image
+                uploadImage(blob);
+            });
+        });
+
+        uploadButton.addEventListener('click', () => {
+            const file = fileInput.files[0];
+            if (file) {
+                // Display the uploaded image
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    webcam.style.display = 'none'; // Hide the webcam video
+                    uploadedImage.style.display = 'block'; // Show the image
+                    uploadedImage.src = e.target.result; // Set the src to the uploaded image
+
+                    // No need to fetch the file as a blob; just use it directly
+                    uploadImage(file);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function uploadImage(imageBlob) {
+            const formData = new FormData();
+            formData.append('image', imageBlob);
+
+            // Get the slider value
+            const realityFantasyValue = realityFantasySlider.value;
+            formData.append('realityFantasy', realityFantasyValue);
+
+            // Get the selected gender
+            let genderValue;
+            genderOptions.forEach(option => {
+                if (option.checked) {
+                    genderValue = option.value;
+                }
+            });
+            formData.append('gender', genderValue);
+
+            // Disable buttons and show loading message
+            disableButtons();
+            loadingMessage.style.display = 'block';
+            resultImage.style.display = 'none';
+            downloadButton.style.display = 'none';
+            changeLoadingMessage();
+
+            fetch('/process_image', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading message and enable buttons
+                loadingMessage.style.display = 'none';
+                enableButtons();
+
+                if (data.image) {
+                    resultImage.src = `data:image/jpeg;base64,${data.image}`;
+                    resultImage.style.display = 'block';
+
+                    // Create a downloadable link for the image
+                    const imageURL = `data:image/jpeg;base64,${data.image}`;
+                    
+                    // Set up download button
+                    downloadButton.style.display = 'block';
+                    downloadButton.href = imageURL;
+                    downloadButton.download = 'avatar.jpg'; // Default filename
+
+                    webcam.style.display = 'block'; // Show the webcam video
+
+                } else {
+                    alert('Failed to process image: ' + data.error);
+                }
+            })
+            .catch(error => {
+                // Hide loading message and enable buttons in case of error
+                loadingMessage.style.display = 'none';
+                enableButtons();
+                console.error('Error:', error);
+            });
+        }
+
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                This project is licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>. It is available as Open Source on 
+                <a href="https://github.com/aborroy/communitylive-avatar" target="_blank">GitHub</a>. Image generation is powered by <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">Stable Diffusion</a> through a REST API.
+            </p>
+            <p>
+                The server is hosted on AWS and is fully managed by Hyland. We prioritize your privacy by ensuring all temporary data is securely deleted after processing.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

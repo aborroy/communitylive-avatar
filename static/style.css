@@ -1,0 +1,255 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main container to hold sections side by side */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Header container to align logo and heading */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style adjustments for the Hyland logo */
+.hyland-logo {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Left section: Upload or Capture */
+.upload-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Right section: Your Avatar */
+.avatar-section {
+    flex: 1;
+    text-align: center;
+    margin-left: 20px;
+}
+
+/* Adjust the heading margin to align with the logo */
+h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 2.0em;
+}
+
+h1, h2, h3 {
+    color: #006334; /* Main green color */
+    font-weight: 600;
+}
+
+/* Button styles */
+button, .button {
+    background-color: #006334; /* Main green color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    text-decoration: none;
+    justify-content:center;
+    align-items: center;
+}
+
+button:hover, .button:hover {
+    background-color: #004d29; /* Darker green on hover */
+}
+
+/* Disable button styling */
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-section, .avatar-section {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .upload-section {
+        width: 100%;
+    }
+
+    .avatar-section {
+        width: 100%;
+    }
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Apply the animation to the loading message */
+#loadingMessage {
+    display: none;
+    font-size: 18px;
+    color: #006334;
+    margin-top: 20px;
+    animation: blink 4.2s infinite;
+}
+
+/* Style for the slider container */
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.slider-container label {
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.slider-container span {
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #888;
+}
+
+#realityFantasySlider {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 8px;
+    background: #ccc;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#realityFantasySlider:hover {
+    opacity: 1;
+}
+
+#realityFantasySlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #006334;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#realityFantasySlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #006334;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Style for the gender selection container */
+.gender-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.gender-container span {
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #888;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.gender-option input[type="radio"] {
+    display: none;
+}
+
+.gender-option .icon {
+    font-size: 1.5em;
+    margin-right: 5px;
+    color: #888;
+}
+
+.gender-option input[type="radio"]:checked + .icon {
+    color: #006334;
+}
+
+.gender-option input[type="radio"]:checked + .icon + span {
+    color: #006334;
+}
+
+.gender-option:hover .icon {
+    color: #006334;
+}
+
+.gender-option:hover span {
+    color: #006334;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;             
+    text-align: center;        
+    font-size: 14px;           
+    color: #333;              
+    margin-top: 40px;          
+}
+
+.footer a {
+    color: #006334;           
+    text-decoration: none;    
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    margin: 10px 0;            
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
