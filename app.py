@@ -93,7 +93,7 @@ def process_image():
 
     # Prompts
     prompt = (
-        "Create a digital avatar based on the provided headshot, styled like a Disney character. "
+        "Create a digital avatar based on the provided headshot, styled like a Pixar character. "
         "Capture the subject's facial features, hairstyle, and expression, with large eyes, smooth lines, and vibrant colors. "
         "Maintain the original pose, hair color, clothes, and gender, with a plain background to emphasize the character."
     )
