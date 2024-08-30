@@ -14,6 +14,7 @@ CONFIG = {
     "DENOISING_STRENGTH": 0.6,
     "CFG_SCALE": 7,
     "SAMPLER_NAME": "Euler a",
+    "RANDOMNESS": 0.05,
     "API_URL": "http://localhost:7861/sdapi/v1/img2img"
 }
 
@@ -47,9 +48,11 @@ def generate_image(encoded_image, prompt, negative_prompt, config=CONFIG):
         "strength": 0.2,
         "script_name": "img2img alternative test",
         "script_args": [
-            "", False, False, "", "", False, config["STEPS"], False, 7, 0.05, True
+            "", False, False, "", "", False, config["STEPS"], False, config["CFG_SCALE"], config["RANDOMNESS"], True
         ]
     }
+    # script_args: _, override_sampler, override_prompt, original_prompt, original_negative_prompt, 
+    #              override_steps, st, override_strength, cfg, randomness, sigma_adjustment
 
     response = requests.post(config["API_URL"], headers={"Content-Type": "application/json"}, data=json.dumps(payload))
     
