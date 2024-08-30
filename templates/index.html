@@ -104,13 +104,24 @@
         setInterval(changeLoadingMessage, 4200);
 
         // Set up webcam
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(stream => {
-                webcam.srcObject = stream;
-            })
-            .catch(err => {
-                console.error('Error accessing webcam: ', err);
-            });
+        navigator.mediaDevices.getUserMedia({
+            video: {
+                width: { ideal: 4096 },  // Ideal maximum width
+                height: { ideal: 2160 }, // Ideal maximum height
+            }
+        })
+        .then(stream => {
+            const webcam = document.getElementById('webcam');
+            webcam.srcObject = stream;
+            // Set canvas size to match video stream size
+            const videoSettings = stream.getVideoTracks()[0].getSettings();
+            const canvas = document.getElementById('canvas');
+            canvas.width = videoSettings.width;
+            canvas.height = videoSettings.height;
+        })
+        .catch(err => {
+            console.error('Error accessing webcam: ', err);
+        });
 
         function disableButtons() {
             captureButton.disabled = true;
