@@ -126,15 +126,25 @@
         function disableButtons() {
             captureButton.disabled = true;
             uploadButton.disabled = true;
+            realityFantasySlider.disabled = true;
+            genderOptions.forEach(option => option.disabled = true);
+
             captureButton.classList.add('disabled');
             uploadButton.classList.add('disabled');
+            realityFantasySlider.classList.add('disabled');
+            genderOptions.forEach(option => option.classList.add('disabled'));
         }
 
         function enableButtons() {
             captureButton.disabled = false;
             uploadButton.disabled = false;
+            realityFantasySlider.disabled = false;
+            genderOptions.forEach(option => option.disabled = false);
+
             captureButton.classList.remove('disabled');
             uploadButton.classList.remove('disabled');
+            realityFantasySlider.classList.remove('disabled');
+            genderOptions.forEach(option => option.classList.remove('disabled'));
         }
 
         captureButton.addEventListener('click', () => {

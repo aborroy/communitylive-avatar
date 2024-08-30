@@ -253,3 +253,16 @@ button:hover, .button:hover {
         font-size: 12px;
     }
 }
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+input[type="range"].disabled {
+    background-color: #ddd;
+}
+
+input[type="radio"].disabled + .icon {
+    color: #bbb;
+}
