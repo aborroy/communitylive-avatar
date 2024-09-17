@@ -55,7 +55,8 @@
         <div class="avatar-section">
 
             <h2>Your Avatar</h2>
-            <div id="loadingMessage">Processing your image, please wait...</div>    
+            <div class="spinner" id="spinner"></div> 
+            <div id="loadingMessage">Processing your image, please wait...</div>
             <img id="resultImage" src="" alt="Result Image" style="display:none; max-width: 100%; height: auto;"/>
             <a id="downloadButton" class="button" style="display:none;">Download Avatar</a>
 
@@ -79,6 +80,7 @@
         const downloadCapture = document.getElementById('downloadCapture');
         const realityFantasySlider = document.getElementById('realityFantasySlider');
         const genderOptions = document.querySelectorAll('input[name="gender"]');
+        const spinner = document.getElementById('spinner');
 
         const quotes = [
             "AI is like a toddler with superpowers—unpredictable and learning.",
@@ -206,6 +208,7 @@
             loadingMessage.style.display = 'block';
             resultImage.style.display = 'none';
             downloadButton.style.display = 'none';
+            spinner.style.display='block';
             changeLoadingMessage();
 
             fetch('/process_image', {
@@ -221,6 +224,7 @@
                 if (data.image) {
                     resultImage.src = `data:image/jpeg;base64,${data.image}`;
                     resultImage.style.display = 'block';
+                    spinner.style.display = 'none';
 
                     // Create a downloadable link for the image
                     const imageURL = `data:image/jpeg;base64,${data.image}`;
