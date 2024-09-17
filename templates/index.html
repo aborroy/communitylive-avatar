@@ -29,7 +29,7 @@
                 <span>Avatar Gender</span>
                 <label class="gender-option">
                     <input type="radio" name="gender" value="auto" checked>
-                    <span class="icon">A</span> Auto
+                    <span class="icon">N</span> Neutral
                 </label>
                 <label class="gender-option">
                     <input type="radio" name="gender" value="male">
@@ -60,6 +60,10 @@
             <img id="resultImage" src="" alt="Result Image" style="display:none; max-width: 100%; height: auto;"/>
             <a id="downloadButton" class="button" style="display:none;">Download Avatar</a>
 
+            <h2></h2>
+            <input type="email" id="emailInput" placeholder="you@example.com" required style="display:none"/>
+            <button id="sendEmailButton" style="display:none">Send Avatar to Email</button>
+            
             <h2>Your Capture</h2>
             <img id="uploadedImage" src="" alt="Uploaded Image" style="display:none; max-width: 100%; height: auto;"/>
             <a id="downloadCapture" class="button" style="display:none;">Download Capture</a>
@@ -81,6 +85,8 @@
         const realityFantasySlider = document.getElementById('realityFantasySlider');
         const genderOptions = document.querySelectorAll('input[name="gender"]');
         const spinner = document.getElementById('spinner');
+        const emailInput = document.getElementById('emailInput');
+        const sendEmailButton = document.getElementById('sendEmailButton');
 
         const quotes = [
             "AI is like a toddler with superpowers—unpredictable and learning.",
@@ -186,6 +192,40 @@
             }
         });
 
+        sendEmailButton.addEventListener('click', () => {
+            const email = emailInput.value;
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            const avatarData = resultImage.src; // This is the base64 data of the avatar image
+
+            // Send the avatar via email
+            fetch('/send_email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    avatar: avatarData
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Avatar sent to ' + email);
+                } else {
+                    alert('Failed to send email: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+                alert('There was an error sending the email.');
+            });
+        });        
+
         function uploadImage(imageBlob) {
             const formData = new FormData();
             formData.append('image', imageBlob);
@@ -208,6 +248,8 @@
             loadingMessage.style.display = 'block';
             resultImage.style.display = 'none';
             downloadButton.style.display = 'none';
+            emailInput.style.display = 'none';
+            sendEmailButton.style.display = 'none';
             spinner.style.display='block';
             changeLoadingMessage();
 
@@ -233,6 +275,9 @@
                     downloadButton.style.display = 'block';
                     downloadButton.href = imageURL;
                     downloadButton.download = 'avatar.jpg'; // Default filename
+
+                    emailInput.style.display = 'block';
+                    sendEmailButton.style.display = 'block';
 
                     webcam.style.display = 'block'; // Show the webcam video
 

@@ -282,3 +282,32 @@ input[type="radio"].disabled + .icon {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Email input and button styles */
+#emailInput {
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 300px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+#sendEmailButton {
+    background-color: #006334;
+    color: white;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    line-height: 40px;
+}
+
+#sendEmailButton:hover {
+    background-color: #004d29;
+}
+

@@ -1,3 +1,7 @@
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+import smtplib
 from flask import Flask, render_template, request, jsonify
 import base64
 import requests
@@ -117,6 +121,45 @@ def process_image():
         return jsonify({'image': generated_image_base64})
     else:
         return jsonify({'error': 'Failed to generate the image'}), 500
+    
+@app.route('/send_email', methods=['POST'])
+def send_email():
+    data = request.get_json()
+    email = data.get('email')
+    avatar_data = data.get('avatar')
+
+    if not email or not avatar_data:
+        return jsonify({'success': False, 'error': 'Invalid email or avatar data'}), 400
+
+    # Convert base64 image to bytes
+    avatar_data = avatar_data.split(',')[1]
+    avatar_bytes = BytesIO(base64.b64decode(avatar_data))
+
+    try:
+        # Set up the email
+        msg = MIMEMultipart()
+        msg['From'] = 'avatar@hyland.com'
+        msg['To'] = email
+        msg['Subject'] = 'Hyland - Your Avatar Image from CommunityLIVE 2024'
+
+        # Attach the avatar as a file
+        part = MIMEBase('application', 'octet-stream')
+        part.set_payload(avatar_bytes.read())
+        encoders.encode_base64(part)
+        part.add_header('Content-Disposition', 'attachment; filename="avatar.jpg"')
+        msg.attach(part)
+
+        # Send the email
+        with smtplib.SMTP('smtp.hyland.com', 587) as server:
+            server.starttls()
+            server.login('email', 'credentials')
+            server.sendmail(msg['From'], msg['To'], msg.as_string())
+
+        return jsonify({'success': True})
+
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        return jsonify({'success': False, 'error': str(e)}), 500    
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=False)
