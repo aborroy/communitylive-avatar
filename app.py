@@ -1,7 +1,7 @@
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
-import smtplib
+from email.mime.text import MIMEText
 from flask import Flask, render_template, request, jsonify
 import base64
 import requests
@@ -9,6 +9,7 @@ import random
 import json
 from io import BytesIO
 from PIL import Image
+import boto3
 
 app = Flask(__name__)
 
@@ -122,6 +123,33 @@ def process_image():
     else:
         return jsonify({'error': 'Failed to generate the image'}), 500
     
+# AWS SES Settings, also requires AWS CLI initialized
+CHARSET = "UTF-8"
+AWS_REGION = "eu-west-1"
+BODY_TEXT = (
+    "Hi,\r\n"
+    "Thank you for attending Hyland CommunityLIVE 2024! We hope you're enjoying the experience.\r\n"
+    "You recently created your custom avatar during the event, and we're excited to send it to you, as requested. Your personalized avatar is attached to this email—feel free to share it, use it in your profiles, or keep it as a memento of the event!\r\n"
+    "If you have any questions or need further assistance, don’t hesitate to reach out. We’re thrilled to have you as part of the Hyland community, and we look forward to seeing you at future events!\r\n"
+    "Best regards,\r\n"
+    "Hyland CommunityLIVE Team"
+            )
+BODY_HTML = """<html>
+<head></head>
+<body>
+  <p>Hi,</p>
+  <p>Thank you for attending Hyland CommunityLIVE 2024! We hope you're enjoying the experience.</p>
+  <p>You recently created your custom avatar during the event, and we're excited to send it to you, as requested. Your personalized avatar is attached to this email—feel free to share it, use it in your profiles, or keep it as a memento of the event!</p>
+  <p>If you have any questions or need further assistance, don’t hesitate to reach out. We’re thrilled to have you as part of the Hyland community, and we look forward to seeing you at future events!</p>
+  <br/>
+  <p>
+    Best regards,
+    Hyland CommunityLIVE Team
+  </p>
+</body>
+</html>
+            """
+
 @app.route('/send_email', methods=['POST'])
 def send_email():
     data = request.get_json()
@@ -138,9 +166,14 @@ def send_email():
     try:
         # Set up the email
         msg = MIMEMultipart()
-        msg['From'] = 'avatar@hyland.com'
+        msg['From'] = 'Hyland TSE <tse.aws@hyland.com>'
         msg['To'] = email
-        msg['Subject'] = 'Hyland - Your Avatar Image from CommunityLIVE 2024'
+        msg['Subject'] = 'Your Custom Avatar from Hyland CommunityLIVE 2024!'
+
+        msg_body = MIMEMultipart('alternative')
+        msg_body.attach(MIMEText(BODY_TEXT.encode(CHARSET), 'plain', CHARSET))
+        msg_body.attach(MIMEText(BODY_HTML.encode(CHARSET), 'html', CHARSET))
+        msg.attach(msg_body)
 
         # Attach the avatar as a file
         part = MIMEBase('application', 'octet-stream')
@@ -150,12 +183,22 @@ def send_email():
         msg.attach(part)
 
         # Send the email
-        with smtplib.SMTP('smtp.hyland.com', 587) as server:
-            server.starttls()
-            server.login('email', 'credentials')
-            server.sendmail(msg['From'], msg['To'], msg.as_string())
+        client = boto3.client('sesv2',region_name=AWS_REGION)
+        body = bytes (str(msg), 'utf-8')
 
-        return jsonify({'success': True})
+        response = client.send_email(
+            FromEmailAddress=msg['From'],
+            Destination={
+                'ToAddresses': [msg['To']]
+            },
+            Content={
+                'Raw': {
+                    'Data': body
+                }
+            }
+        )
+
+        return jsonify({'success': True, 'messageId': response['MessageId']})
 
     except Exception as e:
         print(f"Error sending email: {e}")
