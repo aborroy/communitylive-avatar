@@ -143,7 +143,7 @@ BODY_HTML = """<html>
   <p>If you have any questions or need further assistance, don’t hesitate to reach out. We’re thrilled to have you as part of the Hyland community, and we look forward to seeing you at future events!</p>
   <br/>
   <p>
-    Best regards,
+    Best regards,<br/>
     Hyland CommunityLIVE Team
   </p>
 </body>

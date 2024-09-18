@@ -7,12 +7,14 @@ This project provides a web application that generates avatars from headshots ca
 - **Avatar Creation**: Generate personalized avatars from headshots.
 - **Flexible Input**: Accepts images from both webcam captures and file uploads.
 - **Customizable**: Adjust the fantasy and gender preferences for the generated avatar.
+- **Email Delivery**: Send the generated avatar directly to users via email.
 
 ## Requirements
 
 - **Python**: Version 3.10
 - **Stable Diffusion WebUI**: [GitHub Repository](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 - **GPU**: Recommended for optimal performance
+- **AWS CLI**: Required for utilizing AWS SES (Simple Email Service) to send avatars via email
 
 ## Project Structure
 
@@ -88,7 +90,7 @@ To test the application locally:
    ```bash
    python3 -m venv venv
    source venv/bin/activate
-   pip install flask requests Pillow
+   pip install flask requests Pillow boto3
    python3 app.py
    ```
 
@@ -243,7 +245,7 @@ cd communitylive-avatar
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install flask requests Pillow
+pip install flask requests Pillow boto3
 python3 app.py
 ```
 
@@ -337,7 +339,36 @@ sudo certbot --nginx -d communitylive-avatar.alfdemo.com
 
 Certbot will automatically configure NGINX to use TLS on port 443.
 
-#### **5. Access the Application**
+#### **5. Install AWS CLI and configure AWS SES**
+
+To enable email delivery of avatars using AWS SES (Simple Email Service), follow these steps:
+
+1. **Install AWS CLI**:
+   - Download and install the AWS Command Line Interface (CLI) by following the instructions on the [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+   
+2. **Configure AWS CLI**:
+   - After installation, configure your AWS CLI by running the following command:
+     ```bash
+     aws configure
+     ```
+     - Enter your **AWS Access Key ID**, **Secret Access Key**, **Region**, and **Output format** when prompted.
+
+3. **Set Up AWS SES**:
+   - Verify your email address in the AWS SES Console or via the AWS CLI:
+     ```bash
+     aws ses verify-email-identity --email-address your_email@example.com
+     ```
+   - Once verified, you can send emails programmatically through the SES service.
+
+4. **Test SES Email Sending**:
+   - You can test sending an email using the following CLI command:
+     ```bash
+     aws ses send-email --from your_email@example.com --destination ToAddresses=recipient_email@example.com --message "Subject={Data=Test Email},Body={Text={Data=Hello!}}" 
+     ```
+
+With AWS SES configured, your application will be able to send the generated avatars via email to the specified recipients.
+
+#### **6. Access the Application**
 
 If all steps are completed successfully, your application will be accessible at [https://communitylive-avatar.alfdemo.com](https://communitylive-avatar.alfdemo.com).
 
