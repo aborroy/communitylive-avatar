@@ -2,6 +2,7 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import logging
 from flask import Flask, render_template, request, jsonify
 import base64
 import requests
@@ -119,6 +120,7 @@ def process_image():
     generated_image_base64 = generate_image(encoded_image, prompt, negative_prompt, config={**CONFIG, "DENOISING_STRENGTH": denoising_strength})
 
     if generated_image_base64:
+        log_avatar_creation(denoising_strength, gender)
         return jsonify({'image': generated_image_base64})
     else:
         return jsonify({'error': 'Failed to generate the image'}), 500
@@ -198,11 +200,23 @@ def send_email():
             }
         )
 
+        log_email_sending(msg['To'])
+
         return jsonify({'success': True, 'messageId': response['MessageId']})
 
     except Exception as e:
         print(f"Error sending email: {e}")
-        return jsonify({'success': False, 'error': str(e)}), 500    
+        return jsonify({'success': False, 'error': str(e)}), 500
+    
+# Setup logging configuration
+logging.basicConfig(filename='usage_log.txt', level=logging.INFO, 
+                    format='%(asctime)s - %(message)s')
+
+def log_avatar_creation(style, gender):
+    logging.info(f"Avatar Created - Style: {style}, Gender: {gender}")
+
+def log_email_sending(email):
+    logging.info(f"Email Sent - Address: {email}")    
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=False)
