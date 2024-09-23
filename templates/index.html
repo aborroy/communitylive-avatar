@@ -11,20 +11,19 @@
         <img class="hyland-logo" src="static/Hyland_logo.png" alt="Hyland Logo"/>
         <h1>Get your Avatar for Hyland Connect</h1>
     </div>
+    
     <div class="main-container">
         <!-- Upload or Capture Section -->
         <div class="upload-section">
-            <h2>Capture or Upload Image</h2>
-
-            <!-- Slider for Reality to Fantasy -->
+            <h2>Step 1: Capture or Upload Image</h2>
+    
             <div class="slider-container">
                 <span>Avatar Style&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <label for="realityFantasySlider">Reality</label>
                 <input type="range" id="realityFantasySlider" name="realityFantasy" min="1" max="5" value="3" />
                 <label for="realityFantasySlider">Fantasy</label>
             </div>
-
-            <!-- Radio buttons for Gender selection -->
+    
             <div class="gender-container">
                 <span>Avatar Gender</span>
                 <label class="gender-option">
@@ -40,34 +39,40 @@
                     <span class="icon">♀️</span> Female
                 </label>
             </div>
+    
+            <hr/>
 
             <h3>Capture Image</h3>
             <video id="webcam" width="640" height="480" autoplay></video>
             <canvas id="canvas" width="640" height="480" style="display:none;"></canvas><br/>
             <button id="captureButton">Capture from Webcam</button><br/><br/>
-                        
+
+            <div class="hr-with-text">
+                <span>OR</span>
+            </div>
+    
             <h3>Upload Picture</h3>
             <input type="file" id="fileInput" accept="image/*"><br/>
             <button id="uploadButton">Get Avatar</button>
         </div>
-
+    
         <!-- Your Avatar Section -->
         <div class="avatar-section">
-
-            <h2>Your Avatar</h2>
+            <h2> Step 2: Get Your Avatar</h2>
+            
+            <h3>Your Avatar</h3>
             <div class="spinner" id="spinner"></div> 
             <div id="loadingMessage">Processing your image, please wait...</div>
             <img id="resultImage" src="" alt="Result Image" style="display:none; max-width: 100%; height: auto;"/>
             <a id="downloadButton" class="button" style="display:none;">Download Avatar</a>
 
-            <h2></h2>
+            <h3></h3>
             <input type="email" id="emailInput" placeholder="you@example.com" required style="display:none"/>
             <button id="sendEmailButton" style="display:none">Send Avatar to Email</button>
-            
-            <h2>Your Capture</h2>
+    
+            <h3>Your Capture</h3>
             <img id="uploadedImage" src="" alt="Uploaded Image" style="display:none; max-width: 100%; height: auto;"/>
             <a id="downloadCapture" class="button" style="display:none;">Download Capture</a>
-
         </div>
     </div>
 
@@ -101,7 +106,6 @@
             "An avatar is proof that I can be in two places at once—virtually."
         ];
 
-
         function changeLoadingMessage() {
             const loadingMessageElement = document.getElementById('loadingMessage');
             const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -121,7 +125,6 @@
         .then(stream => {
             const webcam = document.getElementById('webcam');
             webcam.srcObject = stream;
-            // Set canvas size to match video stream size
             const videoSettings = stream.getVideoTracks()[0].getSettings();
             const canvas = document.getElementById('canvas');
             canvas.width = videoSettings.width;

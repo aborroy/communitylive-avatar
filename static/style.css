@@ -11,11 +11,10 @@ body, html {
 .main-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
 }
 
 /* Header container to align logo and heading */
@@ -39,13 +38,17 @@ body, html {
 .upload-section {
     flex: 1;
     margin-right: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #00796b;
 }
 
 /* Right section: Your Avatar */
 .avatar-section {
     flex: 1;
-    text-align: center;
-    margin-left: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #00796b;
 }
 
 /* Adjust the heading margin to align with the logo */
@@ -58,6 +61,41 @@ h1 {
 h1, h2, h3 {
     color: #006334; /* Main green color */
     font-weight: 600;
+}
+
+.upload-section h2, .avatar-section h2 {
+    border-bottom: 2px solid #006334;
+    padding-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px dotted #006334;
+    padding-bottom: 10px;
+}
+
+.hr-with-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.hr-with-text::before,
+.hr-with-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px dashed #006334;
+    margin: 0 10px;
+}
+
+.hr-with-text span {
+    white-space: nowrap;
+    padding: 0 10px;
+    background: #fff;
+    color: #006334;
+    font-weight: bold;
 }
 
 /* Button styles */
