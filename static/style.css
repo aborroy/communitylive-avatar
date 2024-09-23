@@ -160,6 +160,8 @@ button:hover, .button:hover {
     color: #006334;
     margin-top: 20px;
     animation: blink 4.2s infinite;
+    width: 100%;
+    text-align: center;
 }
 
 /* Style for the slider container */
