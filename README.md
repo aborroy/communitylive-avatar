@@ -16,6 +16,10 @@ This project provides a web application that generates avatars from headshots ca
 - **GPU**: Recommended for optimal performance
 - **AWS CLI**: Required for utilizing AWS SES (Simple Email Service) to send avatars via email
 
+## Samples
+
+![Guido van Rossum](samples/sample-avatar-sequence.png)
+
 ## Project Structure
 
 The project is centered around a Python application (`app.py`) that exposes a REST API. This API processes an original image along with optional parameters (fantasy level and gender preference) and returns the generated avatar. The following directories and files are included:
