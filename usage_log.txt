@@ -1,0 +1,457 @@
+2024-09-23 08:32:39,504 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 08:32:39,504 - [33mPress CTRL+C to quit[0m
+2024-09-23 08:32:45,346 - 127.0.0.1 - - [23/Sep/2024 08:32:45] "GET / HTTP/1.1" 200 -
+2024-09-23 08:32:45,352 - 127.0.0.1 - - [23/Sep/2024 08:32:45] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 08:32:45,352 - 127.0.0.1 - - [23/Sep/2024 08:32:45] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 08:32:45,459 - 127.0.0.1 - - [23/Sep/2024 08:32:45] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2024-09-23 08:32:45,520 - 127.0.0.1 - - [23/Sep/2024 08:32:45] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2024-09-23 09:14:45,760 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:14:45,760 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:14:49,148 - 127.0.0.1 - - [23/Sep/2024 09:14:49] "GET / HTTP/1.1" 200 -
+2024-09-23 09:14:49,175 - 127.0.0.1 - - [23/Sep/2024 09:14:49] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:14:49,175 - 127.0.0.1 - - [23/Sep/2024 09:14:49] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:15:32,244 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:15:32,244 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:15:35,166 - 127.0.0.1 - - [23/Sep/2024 09:15:35] "GET / HTTP/1.1" 200 -
+2024-09-23 09:15:35,186 - 127.0.0.1 - - [23/Sep/2024 09:15:35] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 09:15:35,188 - 127.0.0.1 - - [23/Sep/2024 09:15:35] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:16:15,819 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:16:15,819 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:16:18,926 - 127.0.0.1 - - [23/Sep/2024 09:16:18] "GET / HTTP/1.1" 200 -
+2024-09-23 09:16:18,948 - 127.0.0.1 - - [23/Sep/2024 09:16:18] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:16:18,948 - 127.0.0.1 - - [23/Sep/2024 09:16:18] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:16:38,959 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:16:38,959 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:16:42,021 - 127.0.0.1 - - [23/Sep/2024 09:16:42] "GET / HTTP/1.1" 200 -
+2024-09-23 09:16:42,036 - 127.0.0.1 - - [23/Sep/2024 09:16:42] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:16:42,040 - 127.0.0.1 - - [23/Sep/2024 09:16:42] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:18:36,482 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:18:36,483 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:18:39,087 - 127.0.0.1 - - [23/Sep/2024 09:18:39] "GET / HTTP/1.1" 200 -
+2024-09-23 09:18:39,111 - 127.0.0.1 - - [23/Sep/2024 09:18:39] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:18:39,112 - 127.0.0.1 - - [23/Sep/2024 09:18:39] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:19:38,726 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:19:38,726 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:19:41,511 - 127.0.0.1 - - [23/Sep/2024 09:19:41] "GET / HTTP/1.1" 200 -
+2024-09-23 09:19:41,531 - 127.0.0.1 - - [23/Sep/2024 09:19:41] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:19:41,531 - 127.0.0.1 - - [23/Sep/2024 09:19:41] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:20:11,579 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:20:11,579 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:20:14,672 - 127.0.0.1 - - [23/Sep/2024 09:20:14] "GET / HTTP/1.1" 200 -
+2024-09-23 09:20:14,702 - 127.0.0.1 - - [23/Sep/2024 09:20:14] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:20:14,704 - 127.0.0.1 - - [23/Sep/2024 09:20:14] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:22:16,566 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:22:16,566 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:22:19,618 - 127.0.0.1 - - [23/Sep/2024 09:22:19] "GET / HTTP/1.1" 200 -
+2024-09-23 09:22:19,640 - 127.0.0.1 - - [23/Sep/2024 09:22:19] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:22:19,642 - 127.0.0.1 - - [23/Sep/2024 09:22:19] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:23:10,376 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:23:10,376 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:23:13,238 - 127.0.0.1 - - [23/Sep/2024 09:23:13] "GET / HTTP/1.1" 200 -
+2024-09-23 09:23:13,265 - 127.0.0.1 - - [23/Sep/2024 09:23:13] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:23:13,266 - 127.0.0.1 - - [23/Sep/2024 09:23:13] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:25:04,708 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:25:04,708 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:25:07,984 - 127.0.0.1 - - [23/Sep/2024 09:25:07] "GET / HTTP/1.1" 200 -
+2024-09-23 09:25:08,010 - 127.0.0.1 - - [23/Sep/2024 09:25:08] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:25:08,010 - 127.0.0.1 - - [23/Sep/2024 09:25:08] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:25:27,043 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:25:27,043 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:25:30,234 - 127.0.0.1 - - [23/Sep/2024 09:25:30] "GET / HTTP/1.1" 200 -
+2024-09-23 09:25:30,255 - 127.0.0.1 - - [23/Sep/2024 09:25:30] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 09:25:30,255 - 127.0.0.1 - - [23/Sep/2024 09:25:30] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:25:45,324 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:25:45,324 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:25:48,243 - 127.0.0.1 - - [23/Sep/2024 09:25:48] "GET / HTTP/1.1" 200 -
+2024-09-23 09:25:48,267 - 127.0.0.1 - - [23/Sep/2024 09:25:48] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:25:48,267 - 127.0.0.1 - - [23/Sep/2024 09:25:48] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:27:01,752 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:27:01,752 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:27:04,770 - 127.0.0.1 - - [23/Sep/2024 09:27:04] "GET / HTTP/1.1" 200 -
+2024-09-23 09:27:04,788 - 127.0.0.1 - - [23/Sep/2024 09:27:04] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:27:04,790 - 127.0.0.1 - - [23/Sep/2024 09:27:04] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:27:31,284 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:27:31,284 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:27:33,846 - 127.0.0.1 - - [23/Sep/2024 09:27:33] "GET / HTTP/1.1" 200 -
+2024-09-23 09:27:33,875 - 127.0.0.1 - - [23/Sep/2024 09:27:33] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:27:33,878 - 127.0.0.1 - - [23/Sep/2024 09:27:33] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:27:51,001 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:27:51,001 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:27:53,822 - 127.0.0.1 - - [23/Sep/2024 09:27:53] "GET / HTTP/1.1" 200 -
+2024-09-23 09:27:53,848 - 127.0.0.1 - - [23/Sep/2024 09:27:53] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:27:53,851 - 127.0.0.1 - - [23/Sep/2024 09:27:53] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:31:51,228 - 127.0.0.1 - - [23/Sep/2024 09:31:51] "GET / HTTP/1.1" 200 -
+2024-09-23 09:31:51,241 - 127.0.0.1 - - [23/Sep/2024 09:31:51] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:31:51,244 - 127.0.0.1 - - [23/Sep/2024 09:31:51] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:32:02,729 - 127.0.0.1 - - [23/Sep/2024 09:32:02] "GET / HTTP/1.1" 200 -
+2024-09-23 09:32:02,743 - 127.0.0.1 - - [23/Sep/2024 09:32:02] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:32:02,746 - 127.0.0.1 - - [23/Sep/2024 09:32:02] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:32:43,962 - 192.168.1.136 - - [23/Sep/2024 09:32:43] "GET / HTTP/1.1" 200 -
+2024-09-23 09:32:44,022 - 192.168.1.136 - - [23/Sep/2024 09:32:44] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 09:32:44,036 - 192.168.1.136 - - [23/Sep/2024 09:32:44] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 09:32:44,533 - 192.168.1.136 - - [23/Sep/2024 09:32:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-23 09:44:42,679 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 09:44:42,679 - [33mPress CTRL+C to quit[0m
+2024-09-23 09:45:07,794 - 127.0.0.1 - - [23/Sep/2024 09:45:07] "GET / HTTP/1.1" 200 -
+2024-09-23 09:45:07,803 - 127.0.0.1 - - [23/Sep/2024 09:45:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-09-23 09:45:07,805 - 127.0.0.1 - - [23/Sep/2024 09:45:07] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 09:45:07,805 - 127.0.0.1 - - [23/Sep/2024 09:45:07] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 09:45:07,805 - 127.0.0.1 - - [23/Sep/2024 09:45:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-09-23 09:45:32,873 - Avatar Created - Style: 0.6, Gender: auto
+2024-09-23 09:45:32,874 - 127.0.0.1 - - [23/Sep/2024 09:45:32] "POST /process_image HTTP/1.1" 200 -
+2024-09-23 11:47:31,596 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 11:47:31,596 - [33mPress CTRL+C to quit[0m
+2024-09-23 11:47:36,860 - 127.0.0.1 - - [23/Sep/2024 11:47:36] "GET / HTTP/1.1" 200 -
+2024-09-23 11:47:36,867 - 127.0.0.1 - - [23/Sep/2024 11:47:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-09-23 11:47:36,868 - 127.0.0.1 - - [23/Sep/2024 11:47:36] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 13:58:37,793 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 13:58:37,793 - [33mPress CTRL+C to quit[0m
+2024-09-23 13:58:37,897 - 127.0.0.1 - - [23/Sep/2024 13:58:37] "GET / HTTP/1.1" 200 -
+2024-09-23 13:58:37,903 - 127.0.0.1 - - [23/Sep/2024 13:58:37] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 13:58:37,903 - 127.0.0.1 - - [23/Sep/2024 13:58:37] "[36mGET /static/Hyland_logo.png HTTP/1.1[0m" 304 -
+2024-09-23 13:58:43,481 - Exception on /process_image [POST]
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x104a78c80>: Failed to establish a new connection: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=7861): Max retries exceeded with url: /sdapi/v1/img2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104a78c80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/app.py", line 120, in process_image
+    generated_image_base64 = generate_image(encoded_image, prompt, negative_prompt, config={**CONFIG, "DENOISING_STRENGTH": denoising_strength})
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/app.py", line 63, in generate_image
+    response = requests.post(config["API_URL"], headers={"Content-Type": "application/json"}, data=json.dumps(payload))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=7861): Max retries exceeded with url: /sdapi/v1/img2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104a78c80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2024-09-23 13:58:43,486 - 127.0.0.1 - - [23/Sep/2024 13:58:43] "[35m[1mPOST /process_image HTTP/1.1[0m" 500 -
+2024-09-23 13:59:14,655 - 127.0.0.1 - - [23/Sep/2024 13:59:14] "GET / HTTP/1.1" 200 -
+2024-09-23 13:59:14,717 - 127.0.0.1 - - [23/Sep/2024 13:59:14] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 13:59:14,718 - 127.0.0.1 - - [23/Sep/2024 13:59:14] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 13:59:33,774 - Exception on /process_image [POST]
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x104a7ba40>: Failed to establish a new connection: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=7861): Max retries exceeded with url: /sdapi/v1/img2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104a7ba40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/app.py", line 120, in process_image
+    generated_image_base64 = generate_image(encoded_image, prompt, negative_prompt, config={**CONFIG, "DENOISING_STRENGTH": denoising_strength})
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/app.py", line 63, in generate_image
+    response = requests.post(config["API_URL"], headers={"Content-Type": "application/json"}, data=json.dumps(payload))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=7861): Max retries exceeded with url: /sdapi/v1/img2img (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104a7ba40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2024-09-23 13:59:33,776 - 127.0.0.1 - - [23/Sep/2024 13:59:33] "[35m[1mPOST /process_image HTTP/1.1[0m" 500 -
+2024-09-23 14:00:16,111 - 127.0.0.1 - - [23/Sep/2024 14:00:16] "GET / HTTP/1.1" 200 -
+2024-09-23 14:00:16,128 - 127.0.0.1 - - [23/Sep/2024 14:00:16] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 14:00:16,129 - 127.0.0.1 - - [23/Sep/2024 14:00:16] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 14:01:27,003 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 14:01:27,003 - [33mPress CTRL+C to quit[0m
+2024-09-23 14:01:30,331 - 127.0.0.1 - - [23/Sep/2024 14:01:30] "GET / HTTP/1.1" 200 -
+2024-09-23 14:01:30,402 - 127.0.0.1 - - [23/Sep/2024 14:01:30] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 14:01:30,410 - 127.0.0.1 - - [23/Sep/2024 14:01:30] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 14:02:03,969 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 14:02:03,969 - [33mPress CTRL+C to quit[0m
+2024-09-23 14:02:06,740 - 127.0.0.1 - - [23/Sep/2024 14:02:06] "GET / HTTP/1.1" 200 -
+2024-09-23 14:02:06,763 - 127.0.0.1 - - [23/Sep/2024 14:02:06] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 14:02:06,767 - 127.0.0.1 - - [23/Sep/2024 14:02:06] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 14:02:48,528 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.142:5000
+2024-09-23 14:02:48,528 - [33mPress CTRL+C to quit[0m
+2024-09-23 14:02:51,234 - 127.0.0.1 - - [23/Sep/2024 14:02:51] "GET / HTTP/1.1" 200 -
+2024-09-23 14:02:51,250 - 127.0.0.1 - - [23/Sep/2024 14:02:51] "GET /static/style.css HTTP/1.1" 200 -
+2024-09-23 14:02:51,251 - 127.0.0.1 - - [23/Sep/2024 14:02:51] "GET /static/Hyland_logo.png HTTP/1.1" 200 -
+2024-09-23 14:05:11,113 - Exception on /process_image [POST]
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/urllib3/connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/app.py", line 120, in process_image
+    generated_image_base64 = generate_image(encoded_image, prompt, negative_prompt, config={**CONFIG, "DENOISING_STRENGTH": denoising_strength})
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/app.py", line 63, in generate_image
+    response = requests.post(config["API_URL"], headers={"Content-Type": "application/json"}, data=json.dumps(payload))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/angel.fernandoborroy/Downloads/zz-avatar/communitylive-avatar/venv/lib/python3.12/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-09-23 14:05:11,120 - 127.0.0.1 - - [23/Sep/2024 14:05:11] "[35m[1mPOST /process_image HTTP/1.1[0m" 500 -
