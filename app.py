@@ -107,9 +107,10 @@ def process_image():
         )
     elif prompt_choice == 'hylander':
         prompt = (
-            "Create a digital avatar decorating the original headshot as a Highlander warrior with traditional green war facial paint. "
-            "Capture the subject's facial features, hairstyle, skin tone, age and expression. The avatar must remind of the original headshot with fidelity. "
-            "The background should evoke the Scottish Highlands with rolling hills and mist, but remain subtle to emphasize the Highlander as the focal point."
+            "Create a digital avatar based on the original headshot of a person as a Highlander warrior. "
+            "Apply traditional green war paint, but only in minimal areas on the face—such as a few stripes across the cheeks and forehead—without covering the entire face. "
+            "Ensure the avatar closely resembles the original headshot, capturing the subject's facial features, hairstyle, skin tone, age, and expression with high fidelity. "
+            "The background should subtly evoke the Scottish Highlands, with rolling hills and mist, but remain understated to keep the Highlander warrior as the focal point."
         )
     else:
         prompt = "Reimagine the original headshot"
