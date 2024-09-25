@@ -216,21 +216,20 @@ button:hover, .button:hover {
     cursor: pointer;
 }
 
-/* Style for the gender selection container */
-.gender-container {
+.option-container {
     margin-top: 20px;
     display: flex;
     align-items: center;
 }
 
-.gender-container span {
+.option-container span {
     font-weight: 600;
     margin-right: 10px;
     margin-left: 10px;
     color: #888;
 }
 
-.gender-option {
+.custom-option {
     display: flex;
     align-items: center;
     margin-right: 20px;
@@ -238,26 +237,44 @@ button:hover, .button:hover {
     font-weight: 600;
 }
 
-.gender-option .icon {
+.custom-option .icon {
     font-size: 1.5em;
     margin-right: 5px;
     color: #888;
 }
 
-.gender-option input[type="radio"]:checked + .icon {
+.custom-option input[type="radio"]:checked + .icon {
     color: #006334;
 }
 
-.gender-option input[type="radio"]:checked + .icon + span {
+.custom-option input[type="radio"]:checked + .icon + span {
     color: #006334;
 }
 
-.gender-option:hover .icon {
+.custom-option:hover .icon {
     color: #006334;
 }
 
-.gender-option:hover span {
+.custom-option:hover span {
     color: #006334;
+}
+
+#additional-prompt {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-top: 10px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+#additional-prompt:focus {
+    border-color: #006334;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 99, 52, 0.5);
 }
 
 /* Footer Styling */

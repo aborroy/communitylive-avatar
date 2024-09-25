@@ -24,21 +24,38 @@
                 <label for="realityFantasySlider">Fantasy</label>
             </div>
     
-            <div class="gender-container">
+            <div class="option-container">
                 <span>Avatar Gender</span>
-                <label class="gender-option">
+                <label class="custom-option">
                     <input type="radio" name="gender" value="auto" checked>
                     <span class="icon">N</span> Neutral
                 </label>
-                <label class="gender-option">
+                <label class="custom-option">
                     <input type="radio" name="gender" value="male">
                     <span class="icon">♂️</span> Male
                 </label>
-                <label class="gender-option">
+                <label class="custom-option">
                     <input type="radio" name="gender" value="female">
                     <span class="icon">♀️</span> Female
                 </label>
             </div>
+
+            <div class="option-container">
+                <span>Avatar Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <label class="custom-option">
+                    <input type="radio" name="type" value="hylander" checked>
+                    <span class="icon">H</span> Hylander
+                </label>                
+                <label class="custom-option">
+                    <input type="radio" name="type" value="pixar">
+                    <span class="icon">C</span> Cartoon
+                </label>                
+            </div>
+
+            <div class="option-container">
+                <span>Additional Details</span>
+                <input id="additional-prompt" type="text" placeholder="Add details like glasses, beard, skin tone, etc."/>
+            </div>            
     
             <hr/>
 
@@ -89,7 +106,9 @@
         const downloadCapture = document.getElementById('downloadCapture');
         const realityFantasySlider = document.getElementById('realityFantasySlider');
         const genderOptions = document.querySelectorAll('input[name="gender"]');
+        const typeOptions = document.querySelectorAll('input[name="type"]')
         const spinner = document.getElementById('spinner');
+        const additionalPromptInput = document.getElementById('additional-prompt');
         const emailInput = document.getElementById('emailInput');
         const sendEmailButton = document.getElementById('sendEmailButton');
 
@@ -139,11 +158,14 @@
             uploadButton.disabled = true;
             realityFantasySlider.disabled = true;
             genderOptions.forEach(option => option.disabled = true);
+            typeOptions.forEach(option => option.disabled = true);
+            additionalPromptInput.disabled = true;
 
             captureButton.classList.add('disabled');
             uploadButton.classList.add('disabled');
             realityFantasySlider.classList.add('disabled');
             genderOptions.forEach(option => option.classList.add('disabled'));
+            typeOptions.forEach(option => option.classList.add('disabled'));
         }
 
         function enableButtons() {
@@ -151,11 +173,14 @@
             uploadButton.disabled = false;
             realityFantasySlider.disabled = false;
             genderOptions.forEach(option => option.disabled = false);
+            typeOptions.forEach(option => option.disabled = false);
+            additionalPromptInput.disabled = false;
 
             captureButton.classList.remove('disabled');
             uploadButton.classList.remove('disabled');
             realityFantasySlider.classList.remove('disabled');
             genderOptions.forEach(option => option.classList.remove('disabled'));
+            typeOptions.forEach(option => option.classList.remove('disabled'));
         }
 
         captureButton.addEventListener('click', () => {
@@ -245,6 +270,19 @@
                 }
             });
             formData.append('gender', genderValue);
+
+            // Get the selected type
+            let typeValue;
+            typeOptions.forEach(option => {
+                if (option.checked) {
+                    typeValue = option.value;
+                }
+            });
+            formData.append('promptChoice', typeValue);
+
+            // Get additionalPrompt
+            formData.append('additionalPrompt', additionalPromptInput.value || '');
+
 
             // Disable buttons and show loading message
             disableButtons();

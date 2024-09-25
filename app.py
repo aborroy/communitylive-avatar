@@ -98,16 +98,31 @@ def process_image():
     encoded_image = encode_image_to_base64(image_file)
 
     # Prompts
-    prompt = (
-        "Create a digital avatar based on the provided headshot, styled like a Pixar character. "
-        "Capture the subject's facial features, hairstyle, and expression, with large eyes, smooth lines, and vibrant colors. "
-        "Maintain the original pose, hair color, clothes, and gender, with a plain background to emphasize the character."
-    )
+    prompt_choice = request.form.get('promptChoice')
+    if prompt_choice == 'pixar':
+        prompt = (
+            "Create a digital avatar based on the provided headshot, styled like a Pixar character. "
+            "Capture the subject's facial features, hairstyle, and expression, with large eyes, smooth lines, and vibrant colors. "
+            "Maintain the original pose, hair color, clothes, and gender, with a plain background to emphasize the character."
+        )
+    elif prompt_choice == 'hylander':
+        prompt = (
+            "Create a digital avatar decorating the original headshot as a Highlander warrior with traditional green war facial paint. "
+            "Capture the subject's facial features, hairstyle, skin tone, age and expression. The avatar must remind of the original headshot with fidelity. "
+            "The background should evoke the Scottish Highlands with rolling hills and mist, but remain subtle to emphasize the Highlander as the focal point."
+        )
+    else:
+        prompt = "Reimagine the original headshot"
     
     negative_prompt = (
         "no change in gender, no removal of facial hair, no removal of glasses, no exaggerated features, "
         "no overly cartoonish appearance, no other characters in the background"
     )
+
+    # Additional prompt
+    additional_prompt = request.form.get('additionalPrompt')
+    if additional_prompt != '':
+        prompt += additional_prompt
 
     # Adjust the prompt based on gender input
     gender = request.form.get('gender')
