@@ -238,10 +238,6 @@ button:hover, .button:hover {
     font-weight: 600;
 }
 
-.gender-option input[type="radio"] {
-    display: none;
-}
-
 .gender-option .icon {
     font-size: 1.5em;
     margin-right: 5px;
