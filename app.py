@@ -135,7 +135,7 @@ def process_image():
     generated_image_base64 = generate_image(encoded_image, prompt, negative_prompt, config={**CONFIG, "DENOISING_STRENGTH": denoising_strength})
 
     if generated_image_base64:
-        log_avatar_creation(denoising_strength, gender)
+        log_avatar_creation(denoising_strength, gender, prompt_choice, additional_prompt)
         return jsonify({'image': generated_image_base64})
     else:
         return jsonify({'error': 'Failed to generate the image'}), 500
@@ -227,8 +227,8 @@ def send_email():
 logging.basicConfig(filename='usage_log.txt', level=logging.INFO, 
                     format='%(asctime)s - %(message)s')
 
-def log_avatar_creation(style, gender):
-    logging.info(f"Avatar Created - Style: {style}, Gender: {gender}")
+def log_avatar_creation(style, gender, type, prompt):
+    logging.info(f"Avatar Created - Style: {style}, Gender: {gender}, Type: {type}, Prompt: {prompt}")
 
 def log_email_sending(email):
     logging.info(f"Email Sent - Address: {email}")    
