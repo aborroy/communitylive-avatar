@@ -112,6 +112,11 @@ def process_image():
             "Ensure the avatar closely resembles the original headshot, capturing the subject's facial features, hairstyle, skin tone, age, and expression with high fidelity. "
             "The background should subtly evoke the Scottish Highlands, with rolling hills and mist, but remain understated to keep the Highlander warrior as the focal point."
         )
+    elif prompt_choice == 'cyborg':
+        prompt = (
+            "Reimagine the original human headshot as half-human and half-robot , including cybernetic elelements. "
+            "Preserve the original clothing and pose, with a plain background to emphasize the avatar's futuristic and cyborg-like appearance."
+        )
     else:
         prompt = "Reimagine the original headshot"
     
