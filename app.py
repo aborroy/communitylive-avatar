@@ -114,7 +114,7 @@ def process_image():
         )
     elif prompt_choice == 'cyborg':
         prompt = (
-            "Reimagine the original human headshot as half-human and half-robot , including cybernetic elelements. "
+            "Reimagine the original headshot as a cyborg. "
             "Preserve the original clothing and pose, with a plain background to emphasize the avatar's futuristic and cyborg-like appearance."
         )
     else:
